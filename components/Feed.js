@@ -16,7 +16,7 @@ function Feed() {
           setPosts(snapshot.docs);
         }
       ),
-    [db]
+    []
   );
 
   return (
