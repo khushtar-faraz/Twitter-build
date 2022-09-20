@@ -33,12 +33,12 @@ export default function Home({ providers, trendingResults, followResults }) {
 }
 
 export async function getServerSideProps(context) {
-  const trendingResults = await fetch("https://jsonkeeper.com/b/0CI9").then(
-    (res) => res.json()
-  );
-  const followResults = await fetch("https://jsonkeeper.com/b/WWMJ").then(
-    (res) => res.json()
-  );
+  const trendingResults = await fetch(
+    "https://api.npoint.io/fbdc624c97a00e19afd1"
+  ).then((res) => res.json());
+  const followResults = await fetch(
+    "https://api.npoint.io/770543556f62d0a80037"
+  ).then((res) => res.json());
   const providers = await getProviders();
   const session = await getSession(context);
 
